@@ -1,0 +1,63 @@
+// WRITTEN BY EMIKO
+//
+// LAST UPDATE 6/28/2023
+// FROM ☆HOSTILES☆ WITH LOVE. Vsegda gotov!
+
+// ================================
+// MISSION CONFIGS
+
+//klpq_musicRadio_enable = true;
+//klpq_musicRadio_enableBackpackRadioMP = true;
+
+// ================================
+// SOUNDS CONFIG
+class CfgSounds {
+	sounds[] = {MIKOalertUnconscious};
+	class MIKOalertUnconscious
+	{
+		name = "MIKOalertUnconscious";
+		sound[] = {"\sounds\unconsciousAlert.ogg", 200, 1};
+		titles[] = {0,""};
+	};
+};
+
+// ================================
+// FUNCTIONS CONFIG
+class CfgFunctions
+{
+	class MIKO
+	{
+		class Preinit
+		{
+			class loadData { file = "data\init.sqf"; preInit = 1; };  
+		};
+
+		class Functions
+		{
+			class canSaveLoadout { file = "scripts\fn_canSaveLoadout.sqf"; };
+			class canSaveLoadoutZeus { file = "scripts\fn_canSaveLoadoutZeus.sqf"; };
+			class addGoggles { file = "scripts\fn_addGoggles.sqf"; };
+			class unconsciousAlert { file = "scripts\fn_unconsciousAlert.sqf"; };
+		};
+
+		class Earthquakes
+		{
+			class anomalousEarthquake { file = "scripts\Earthquakes\fn_anomalousEarthquake.sqf"; };
+			class earthquakePP { file = "scripts\Earthquakes\fn_earthquakePP.sqf"; };
+			class earthquakeNotification { file = "scripts\Earthquakes\fn_earthquakeNotification.sqf"; };
+		};
+
+		class VicPen
+		{
+			class setVicController { file = "scripts\VicPen\fn_setVicController.sqf"; };
+			class trySpawnVic { file = "scripts\VicPen\fn_trySpawnVic.sqf"; };
+			class clearVicPen { file = "scripts\VicPen\fn_clearVicPen.sqf"; };
+		};
+
+		class GlobalAmbience
+		{
+			class doAmbienceSound { file = "scripts\GlobalAmbience\fn_doAmbienceSound.sqf"; };
+			class getRandomAmbience { file = "scripts\GlobalAmbience\fn_getRandomAmbience.sqf"; };	
+		};
+	};
+};
