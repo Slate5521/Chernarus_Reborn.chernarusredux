@@ -29,16 +29,23 @@ MIKO_loadoutScript =
 
 	switch(roleDescription _unit) do
 	{
-		case "Spetsnaz Medic":
+		case "Medic":
 		{
 			_unit setUnitTrait ["loadCoef", (_unit getUnitTrait "loadCoef") / 8.0];
 			_unit setUnitTrait ["medic", true];
 		};
-		case "Spetsnaz Sapper":
+		case "Weapon Specialist":
 		{
-			_unit setUnitTrait ["loadCoef", (_unit getUnitTrait "loadCoef") / 8.0];
+			_unit setUnitTrait ["loadCoef", (_unit getUnitTrait "loadCoef") / 16.0];
 			_unit setUnitTrait ["explosiveSpecialist ", true];
 		};
+		case "Technician":
+		{
+			_unit setUnitTrait ["loadCoef", (_unit getUnitTrait "loadCoef") / 16.0];
+			_unit setUnitTrait ["engineer", true];
+			_unit setUnitTrait ["UAVHacker", true];
+			_unit setUnitTrait ["explosiveSpecialist", true];
+		}
 	};
 
 	_loadout
