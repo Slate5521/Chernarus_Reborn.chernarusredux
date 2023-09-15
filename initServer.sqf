@@ -28,8 +28,7 @@ while {true} do
 	if(time >= _AMlast + _AMwaitTime) then 
 	{
 		(call MIKO_fnc_getRandomAmbience) remoteExec ["MIKO_fnc_doAmbienceSound", allPlayers];
-		//_AMwaitTime = floor (random[60, 80, 140]);
-		_AmwaitTime = 2;
+		_AMwaitTime = floor (random[20, 60, 80]);
 		_AMlast = time;
 	};
 
