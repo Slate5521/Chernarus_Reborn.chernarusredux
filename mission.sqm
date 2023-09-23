@@ -25,10 +25,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2791.7783,214.59465,5427.5493};
-		dir[]={0.73914778,0.18065645,0.64890814};
-		up[]={-0.13574228,0.98354733,-0.11916959};
-		aside[]={0.65976131,-1.0190997e-006,-0.75151306};
+		pos[]={2526.0686,201.31117,5053.1226};
+		dir[]={-0.95126724,-0.30739367,-0.027640527};
+		up[]={-0.30736944,0.95154423,-0.0089310063};
+		aside[]={-0.029048363,-3.6937126e-007,0.99965602};
 	};
 };
 binarizationWanted=0;
@@ -17970,6 +17970,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				createAsLocalObject=1;
+				disableSimulation=1;
 			};
 			id=2480;
 			type="Land_HBarrier_5_F";
@@ -26790,6 +26792,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=6979;
 			type="Land_LampHalogen_F";
