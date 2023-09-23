@@ -19,7 +19,7 @@ params ["_intensity"];
 private ["_apSize", "_offset"];
 
 // If zeus do not apply PP.
-if(!isNull (getAssignedCuratorLogic player)) exitWith {};
+if(typeOf player == "VirtualCurator_F") exitWith {};
 
 _apSize = 0.8 - 0.1 * _intensity;
 _offset = -0.99999 * _intensity - 0.09;
