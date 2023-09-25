@@ -6,10 +6,9 @@
 //                        intensity.
 //  _intensity [integer] [1, 4] The intensity of the earthquake.
 //
-// DESCRIPTION: Add a mask to every unit in a group.
-//  DEPENDENCY: https://steamcommunity.com/sharedfiles/filedetails/?id=1996610193
+// DESCRIPTION: Perform an anomalous earthquake.
 //      AUTHOR: EMIKO
-// LAST UPDATE: 7/26/2023
+// LAST UPDATE: 9/25/2023
 // 
 // FROM ☆HOSTILES☆ WITH LOVE. Vsegda gotov!
 
