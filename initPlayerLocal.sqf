@@ -2,6 +2,18 @@
 // DYNAMIC GROUPS FRAMEWORK
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups; // Initializes the player/client side Dynamic Groups framework
 
+["ace_unconscious", 
+{	// Passed to each local machine.
+	params ["_unit", "_isUnconscious"];
+	
+	// Check if they're a player, not the same person, unconscious, and in the same group.
+	if(isPlayer _unit && _isUnconscious && !player isEqualTo _unit && (group player) isEqualTo (group _unit)) then
+	{
+		// Play the alert sound.
+		call "MIKO_fnc_unconsciousAlert";
+	};
+}] call CBA_fnc_addEventHandler;
+
 // ================================
 // POST PROCESSING
 

@@ -3,18 +3,6 @@ call compile preprocessFileLineNumbers "loadouts.sqf";
 waitUntil {!isNull player};
 
 // ================================
-// DEATH/UNCON ALERT SYSTEM
-
-player addEventHandler ["Killed",
-	{
-		params ["_unit", "_killer", "_instigator", "_useEffects"];
-		
-		remoteExec ["MIKO_fnc_unconsciousAlert", group player];
-	}
-];
-
-
-// ================================
 // <RESPAWN LOGIC>
 //
 
